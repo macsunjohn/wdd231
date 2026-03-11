@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Abuja Tech Hub",
+    "address": "Central Business District, Abuja",
+    "phone": "+234 801 234 5678",
+    "website": "https://abujatechhub.com",
+    "image": "images/abutech.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Prime Logistics Ltd",
+    "address": "Wuse Zone 4, Abuja",
+    "phone": "+234 803 456 7890",
+    "website": "https://primelogistics.ng",
+    "image": "images/prime.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Golden Bites Restaurant",
+    "address": "Garki Area 11, Abuja",
+    "phone": "+234 805 111 2233",
+    "website": "https://goldenbites.ng",
+    "image": "images/golden.svg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "City Builders Ltd",
+    "address": "Maitama District, Abuja",
+    "phone": "+234 806 333 4455",
+    "website": "https://citybuilders.ng",
+    "image": "images/city.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Green Farms Market",
+    "address": "Utako Market, Abuja",
+    "phone": "+234 807 222 3344",
+    "website": "https://greenfarms.ng",
+    "image": "images/green.svg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Capital Finance Bank",
+    "address": "CBD Abuja",
+    "phone": "+234 809 555 6677",
+    "website": "https://capitalfinance.ng",
+    "image": "images/capital.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Abuja Creative Studio",
+    "address": "Jabi Lake Mall",
+    "phone": "+234 808 777 8899",
+    "website": "https://abujacreative.ng",
+    "image": "images/abucreative.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Sunrise Travel Agency",
+    "address": "Wuse Zone 2, Abuja",
+    "phone": "+234 810 123 4567",
+    "website": "https://sunrisetravel.ng",
+    "image": "images/sunrise.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Harmony Health Clinic",
+    "address": "Gwarinpa, Abuja",
+    "phone": "+234 811 234 5678",
+    "website": "https://harmonyhealth.ng",
+    "image": "images/harmony.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Silverline Electronics",
+    "address": "Jabi District, Abuja",
+    "phone": "+234 812 345 6789",
+    "website": "https://silverlineelectronics.ng",
+    "image": "images/silver.svg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Eco Clean Services",
+    "address": "Maitama, Abuja",
+    "phone": "+234 813 456 7890",
+    "website": "https://ecoclean.ng",
+    "image": "images/ecoclean.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Bright Minds Academy",
+    "address": "Wuse Zone 5, Abuja",
+    "phone": "+234 814 567 8901",
+    "website": "https://brightminds.ng",
+    "image": "images/academy.svg",
+    "membershipLevel": 3
+  }
+]
