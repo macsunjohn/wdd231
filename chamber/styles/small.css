@@ -12,8 +12,8 @@
 
   /* Font Variables */
   --heading-font: "Poppins", sans-serif;
-  --body-font: Arial, Helvetica, sans-serif;
-  --nav-font: "Play", sans-serif;
+  --body-font: "Roboto", sans-serif;
+  --nav-font: "Roboto", sans-serif;
 
   /* Spacing */
   --padding-small: 0.5rem;
@@ -55,7 +55,7 @@ header {
 }
 
 .logo h1 {
-  font-family: var(--nav-font);
+  font-family: var(--heading-font);
 }
 
 /* NAVIGATION */
