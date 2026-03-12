@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mark John | WDD231 Home</title>
+<meta name="description" content="WDD231 Frontend Web Development Course Home Page">
+<meta name="author" content="Mark John">
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="logo">
+  <!-- Educational Icon: Graduation Cap -->
+  <img src="images/new_logo.svg" alt="Education Icon" class="edu-icon">
+  
+  <!-- Logo Text -->
+  <span>Mark <strong>John</strong></span>
+</div>
+  
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<nav id="nav">
+
+<ul class="navigation">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Chamber Project</a></li>
+<li><a href="#">Final Project</a></li>
+
+</ul>
+
+</nav>
+
+
+<main>
+  <h1>Home</h1>
+  <div class="top-container">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! My name is Mark John, and I am currently studying Software Development at Brigham Young University-Idaho (BYU-Idaho), USA. I am based in Abuja, Nigeria, where I continue to build my knowledge and skills in modern technology and software development.
+        I have a strong passion for writing code and creating digital solutions. My interests include surfing the internet to explore new technologies, playing basketball, and traveling to experience new environments and ideas.
+        My long-term goal is to continue developing software even at old age, constantly learning and contributing to the tech community throughout my life.
+        Over time, I have developed skills in HTML, CSS, JavaScript, SQL, Power BI, AI automation, and social media operations. I enjoy combining these skills to build useful and innovative digital projects.
+        I am always eager to learn new technologies, collaborate with others, and improve my abilities as a software developer.
+      </p>
+    </section>
+<section class="photo">
+  <h2>Student Photo</h2>
+  <div class="image-placeholder">
+    <img src="images/MJ.png" alt="Student photo" width="140">
+  </div>
+</section>
+  </div>
+
+  <section class="courses">
+    <h2>Web Certificate Courses</h2>
+    <div class="buttons">
+      <button id="btn-all">All</button>
+      <button id="btn-cse">CSE</button>
+      <button id="btn-wdd">WDD</button>
+    </div>
+    <div id="course-container"></div>
+    <p>Total Credits: <span id="total-credits"></span></p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://linkedin.com"><img src="images/linkedIn.svg" alt="LinkedIn" width="40"></a>
+    <a href="https://github.com"><img src="images/githup.svg" alt="GitHub" width="40"></a>
+    <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook" width="40"></a>
+  </div>
+  <p>
+    © <span id="year"></span> Mark John | Nigeria
+  </p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

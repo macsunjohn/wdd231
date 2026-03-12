@@ -1,0 +1,50 @@
+/* large.css (inside your @media min-width: 1024px) */
+
+@media (min-width: 1024px) {
+        .top-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        gap: 20px;
+        align-items: start;
+    }
+
+    #menu {
+        display: none;
+    }
+     nav {
+        display: flex;
+        background: #333;
+        padding: 0 20px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation li a:hover {
+        background-color: #555;
+    }
+
+        #course-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+       .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons button {
+        flex: 1;
+        max-width: 300px;
+        background: #ccc;
+        border: 2px solid #555;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
