@@ -1,0 +1,157 @@
+/* --- Tablet and Desktop (Greater than 768px) --- */
+@media (min-width: 768px) {
+      #hamburger {
+    display: none;
+    font-size: 2rem;
+    margin-left: auto;
+
+  }
+
+  .navigation {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .navigation li {
+    margin: 0;
+  }
+
+   #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding-large);
+  }
+
+  #members.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+    #members.list .card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    padding: var(--padding-large);
+  }
+
+    #members.list .card img {
+    width: 200px; 
+    height: auto;
+    object-fit: cover;
+  }
+
+  #members.list .card-content {
+    flex: 1;
+  }
+
+
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* --- Mobile Less than 767px) --- */
+@media (max-width: 767px) {
+    .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .navigation.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation li {
+    width: 100%;
+}
+
+.navigation a {
+    text-align: center;
+}
+
+   #members.list .card {
+    text-align: center;
+  }
+  
+  #members.list .card img {
+    width: 100%;
+    margin-bottom: var(--padding-medium);
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+
+   h2 {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+}
+
+/* --- Extra Small Mobile Devices (Less than 400px) --- */
+@media (max-width: 400px) {
+header, main, .footer {
+    padding: var(--padding-small);
+  }
+
+   header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  #hamburger {
+    font-size: 1.7rem;
+    margin-left: auto;
+  }
+
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+ .card {
+    padding: var(--padding-small);
+  }
+
+  .view-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .view-buttons button {
+    width: 100%;
+    padding: 0.6rem;
+  }
+
+  .social {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-right {
+    font-size: 12px;
+  }
+}

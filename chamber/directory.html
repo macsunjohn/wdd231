@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abuja Chamber of Commerce Directory</title>
+<meta name="description" content="Directory of businesses that belong to the Abuja Chamber of Commerce.">
+<meta name="author" content="Janet Ojochide Daniel">
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Facebook Meta -->
+<meta property="og:title" content="Abuja Chamber of Commerce">
+<meta property="og:description" content="Supporting businesses in Abuja through networking and partnerships.">
+<meta property="og:image" content="https://macsunjohn.github.io/wdd231/images/logo.svg">
+<meta property="og:url" content="https://macsunjohn.github.io/wdd231/chamber">
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="icon" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script defer src="scripts/directory.js"></script>
+<script defer src="scripts/date.js"></script>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="images/logo.svg" alt="Abuja Chamber Logo">
+<h1>Abuja Chamber of Commerce</h1>
+</div>
+
+<button type="button" id="hamburger">☰</button>
+
+<nav>
+<ul class="navigation">
+<li><a href="#">Home</a></li>
+<li><a href="directory.html" class="active">Directory</a></li>
+<li><a href="#">Join</a></li>
+<li><a href="#">Discover</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h2>Business Directory</h2>
+
+<div class="view-buttons">
+<button type="button" id="grid">Grid View</button>
+<button type="button" id="list">List View</button>
+</div>
+
+<section id="members" class="grid"></section>
+
+</main>
+
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Section -->
+    <div class="footer-left">
+      <strong>Abuja Chamber of Commerce</strong><br>
+      #40 Accra Street,<br>
+      Wuse Zone 5, Abuja FCT.<br>
+      info@abujachamber.org<br>
+      (+224) 8068-133269
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-center">
+      <a href="#" class="social"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#" class="social"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+      <a href="#" class="social"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <strong>WDD231 Class Project</strong><br>
+      John Mark<br>
+      &copy; <span id="currentyear"></span> Abuja Chamber of Commerce <br>
+      <span id="lastModified"></span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
