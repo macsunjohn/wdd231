@@ -1,4 +1,4 @@
-const mainnav = document.querySelector('#nav');
+const mainnav = document.querySelector('.main-nav');
 const hambutton = document.querySelector('#menu');
 
 hambutton.addEventListener('click', () => {
@@ -6,8 +6,8 @@ hambutton.addEventListener('click', () => {
     hambutton.classList.toggle('open');
 
     if (hambutton.classList.contains('open')) {
-        hambutton.textContent = "❌"; 
+        hambutton.textContent = "❌";
     } else {
-        hambutton.textContent = "☰"; 
+        hambutton.textContent = "☰";
     }
 });

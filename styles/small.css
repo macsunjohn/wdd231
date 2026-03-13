@@ -2,6 +2,7 @@ body {
 font-family: Arial, sans-serif;
 margin:0;
 background:#e6e6e6;
+overflow-x:hidden;
 }
 
 header {
@@ -19,28 +20,28 @@ color: #fff;
     gap: 10px;
 }
 
-/* Educational Icon */
 .logo .edu-icon {
     width: 85px;
     height: 85px;
 }
 
-/* Logo Text */
 .logo span {
     font-size: 30px;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    color: #03173a; /* blue for Mark */
+    color: #b4c9ed; 
     letter-spacing: 1px;
 }
 
 .logo span strong {
-    color: #ff7a00; /* orange accent for John */
+    color: #ff7a00; 
 }
-#menu {
-font-size:24px;
+
+#menu{
+font-size:2rem;
 background:none;
 border:none;
+cursor:pointer;
 }
 
 nav {
@@ -60,6 +61,7 @@ margin:0;
 
 .navigation li {
 border-bottom:1px solid #444;
+padding: 10px;
 }
 
 .navigation a {
@@ -69,8 +71,10 @@ text-decoration:none;
 color:white;
 }
 
-main {
-padding:10px;
+main{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
 h1 {
