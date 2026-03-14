@@ -39,7 +39,7 @@ body {
   gap: 0.5rem;
 }
 
-.logo h1 {
+.logo span {
   font-family: var(--heading-font);
   font-size: 2rem;
   color: var(--text-light);
