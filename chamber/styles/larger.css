@@ -60,11 +60,6 @@
     text-align: center;
   }
 
-  .navigation.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .navigation li {
     width: 100%;
