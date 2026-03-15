@@ -52,7 +52,7 @@
   }
 }
 
-/* --- Mobile Less than 767px) --- */
+/* --- Mobile (Less than 767px) --- */
 @media (max-width: 767px) {
     .footer-container {
     flex-direction: column;

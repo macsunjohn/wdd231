@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 :root {
 
   /* Color Variables */
@@ -75,7 +78,8 @@ header {
 }
 
 .navigation.open {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex-basis: 100%; 
   order: 3; 
   text-align: center;
@@ -100,6 +104,10 @@ header {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
   }
+
+  .navigation a:hover {
+  color: var(--secondary-color);
+}
 
 /* MAIN */
 
@@ -161,6 +169,10 @@ h2 {
   background: var(--view-buttons);
   color: var(--white);
   cursor: pointer;
+}
+
+.view-buttons button:hover {
+  opacity: 0.8;
 }
 
 
