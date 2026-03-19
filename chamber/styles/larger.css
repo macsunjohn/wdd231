@@ -50,6 +50,22 @@
     flex-direction: row;
     text-align: left;
   }
+
+ .home-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .weather-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .spotlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
 
 /* --- Mobile (Less than 767px) --- */
