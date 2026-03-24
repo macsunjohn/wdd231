@@ -17,3 +17,4 @@ closeButtons.forEach(button => {
         button.closest('dialog').close();
     });
 });
+

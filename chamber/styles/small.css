@@ -454,3 +454,111 @@ dialog::backdrop {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* Thank You Page Container */
+.thankyou-content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.thankyou-content h1 {
+    color: #2a8a2a; 
+    margin-bottom: 10px;
+}
+
+/* Submission Summary Box */
+#submission-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: left; /* Better for reading data pairs */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#submission-summary h2 {
+    border-bottom: 2px solid #2a8a2a;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Individual Data Rows */
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+.info-item:nth-child(even) {
+    background-color: #f1f1f1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.info-item strong {
+    color: #555;
+    font-weight: 600;
+}
+
+.info-item span {
+    color: #000;
+    word-break: break-all; 
+}
+
+/* Back Button */
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.back-home:hover {
+    background-color: #222;
+}
+
+/* Container to center the button */
+.thankyou-footer {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* The Return Home Button Style */
+.back-home {
+    display: inline-block;
+    background-color: #333; 
+    color: #ffffff;
+    text-decoration: none; 
+    padding: 12px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.back-home:hover {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px); 
+}
+
+.back-home:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
