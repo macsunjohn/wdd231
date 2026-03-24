@@ -24,8 +24,8 @@
 
 <script src="scripts/weather.js" defer></script>
 <script src="scripts/spotlights.js" defer></script>
-<script defer src="scripts/date.js" defer></script>
-<script defer src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
@@ -42,21 +42,21 @@
 <ul class="navigation">
 <li><a href="index.html" class="active">Home</a></li>
 <li><a href="directory.html"> Directory</a></li>
-<li><a href="#">Join</a></li>
-<li><a href="#">Discover</a></li>
+<li><a href="join.html">Join</a></li>
+<li><a href="discover.html">Discover</a></li>
 </ul>
 </nav>
 </header>
 
 <main>
   <!-- HERO -->
-  <section class="hero">
+  <div class="hero">
     <picture>
       <source media="(max-width: 600px)" srcset="images/train.webp">
       <img src="images/train.webp" alt="Abuja Train Station">
     </picture>
     <a href="#" class="cta">Join the Chamber</a>
-  </section>
+  </div>
   <h2>Home</h2>
   <!-- GRID SECTION -->
   <section class="home-grid">
@@ -69,11 +69,9 @@
     </div>
 
     <div class="index-card weather">
-  <h3>Current Weather</h3>
-
+  <h2>Current Weather</h2>
   <div class="weather-content">
-    <img id="weather-icon" src="" alt="">
-
+    <img id="weather-icon" src="images/cloud.png" alt="Cloudy Weather Icon">
     <div class="weather-info">
       <p><strong><span id="current-temp"></span></strong></p>
       <p id="description"></p>
@@ -94,7 +92,7 @@
   </section>
 
   <!-- SPOTLIGHTS -->
-  <section class="spotlights" id="spotlights"></section>
+  <div class="spotlights" id="spotlights"></div>
 
 </main>
 
