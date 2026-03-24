@@ -421,28 +421,32 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Initial State: thick left border for all inputs (except submit) */
-.join-form input:not([type="submit"]),
-.join-form select,
-.join-form textarea {
+/* Target all inputs except the submit button */
+.form-section input:not([type="submit"]),
+.form-section select,
+.form-section textarea {
     border: 1px solid #999; 
     border-left: 8px solid #999; 
-    transition: border-color 0.3s ease; 
+    border-style: solid;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
 }
 
-/* Invalid State: Red border while the user is typing or if field is empty/required */
-/* :placeholder-shown prevents the field from being red before the user starts typing */
-.join-form input:not([type="submit"]):not(:placeholder-shown):invalid,
-.join-form select:not(:placeholder-shown):invalid,
-.join-form textarea:not(:placeholder-shown):invalid {
-    border-left-color: #d12f2f; 
+/* Invalid State - Red */
+.form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
+.form-section select:not(:placeholder-shown):invalid {
+    border-left-color: #d12f2f !important;
 }
 
-/* Valid State: Green border when the pattern/requirement is met */
-.join-form input:not([type="submit"]):valid,
-.join-form select:valid,
-.join-form textarea:valid {
-    border-left-color: #2a8a2a; 
+/* Valid State - Green */
+.form-section input:not([type="submit"]):valid,
+.form-section select:valid,
+.form-section textarea:valid {
+    border-left-color: #2a8a2a !important;
 }
 
 
