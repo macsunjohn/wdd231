@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abuja Chamber of Commerce | Join</title>
+<meta name="description" content="Directory of businesses that belong to the Abuja Chamber of Commerce.">
+<meta name="author" content="Janet Ojochide Daniel">
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Facebook Meta -->
+<meta property="og:title" content="Abuja Chamber of Commerce">
+<meta property="og:description" content="Supporting businesses in Abuja through networking and partnerships.">
+<meta property="og:image" content="https://macsunjohn.github.io/wdd231/images/logo.svg">
+<meta property="og:url" content="https://macsunjohn.github.io/wdd231/chamber">
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="icon" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script src="scripts/date.js" defer></script>
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="images/logo.svg" alt="Abuja Chamber Logo">
+<h1>Abuja Chamber of Commerce</h1>
+</div>
+
+<button type="button" id="hamburger">☰</button>
+
+<nav>
+<ul class="navigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="directory.html"> Directory</a></li>
+<li><a href="join.html" class="active">Join</a></li>
+<li><a href="discover.html">Discover</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="join-main">
+        <section class="form-section">
+            <h2>Membership Application Form</h2>
+            <form method="get" action="thankyou.html">
+                <label>First Name
+                    <input type="text" name="fname" autocomplete="given-name" required title="Enter your first name">
+                </label>
+                <label>Last Name
+                    <input type="text" name="lname" autocomplete="family-name" required title="Enter your last name">
+                </label>
+                <label>Title
+                    <input type="text" name="title" autocomplete="organization-title" 
+                           pattern="[A-Za-z\s-]{7,}" title="Alpha characters, hyphens, and spaces only. Min 7 chars." required>
+                           <small>Min. 7 characters; letters, spaces, and hyphens only.</small>
+                </label>
+                <label>Email
+                    <input type="email" name="email" placeholder="john89@gmail.com" autocomplete="email" required title="Enter a valid email">
+                </label>
+                <label>Cell Phone
+                    <input type="tel" name="phone" placeholder="987-555-1234" autocomplete="tel" required title="Enter your phone number">
+                </label>
+                <label>Organization
+                    <input type="text" name="organization" autocomplete="organization" required title="Enter your organization name">
+                </label>
+                
+                <label>Membership Level
+                    <select name="membership" required>
+                        <option value="" selected disabled>Select a Level</option>
+                        <option value="np">Non-Profit (NP)</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+
+                <label>Organization Description
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit" class="submit-btn">Apply for Membership</button>
+            </form>
+        </section>
+
+        <section class="levels-section">
+            <h2>Membership Levels</h2>
+            <div class="membership-card" id="np-card">
+                <p>Non Profit Membership Level</p>
+                <button type="button" class="open-modal" data-modal="np-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="bronze-card">
+                <p>Bronze Membership Level</p>
+                <button type="button" class="open-modal" data-modal="bronze-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <p>Silver Membership Level</p>
+                <button type="button" class="open-modal" data-modal="silver-modal">Learn More</button>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <p>Gold Membership Level</p>
+                <button type="button" class="open-modal" data-modal="gold-modal">Learn More</button>
+            </div>
+        </section>
+
+        <dialog id="np-modal">
+    <h3>Non-Profit Membership Benefits</h3>
+    <ul>
+        <li><strong>Eligibility:</strong> Exclusive to 501(c)(3) organizations.</li>
+        <li><strong>Basic Listing:</strong> Inclusion in our digital community directory.</li>
+        <li><strong>Event Access:</strong> Invitation to monthly community mixers.</li>
+        <li><strong>Newsletter:</strong> Subscription to the "Chamber Pulse" weekly update.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
+</dialog>
+
+<dialog id="bronze-modal">
+    <h3>Bronze Membership Benefits</h3>
+    <ul>
+        <li><strong>General Membership:</strong> Open to all small businesses and startups.</li>
+        <li><strong>Enhanced Listing:</strong> Directory listing with your business logo and social media links.</li>
+        <li><strong>Spotlight Feature:</strong> One "New Member Spotlight" post on our official Facebook page.</li>
+        <li><strong>Training:</strong> Access to "Business Basics" webinar recordings.</li>
+        <li><strong>Ribbon Cutting:</strong> Complimentary grand opening or anniversary ceremony support.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
+</dialog>
+
+<dialog id="silver-modal">
+    <h3>Silver Membership Benefits</h3>
+    <ul>
+        <li><strong>All Bronze Benefits included.</strong></li>
+        <li><strong>Training Workshops:</strong> Free access for up to 3 employees.</li>
+        <li><strong>Spotlight Feature:</strong> One dedicated social media post per quarter.</li>
+        <li><strong>Directory Upgrade:</strong> Priority placement in the digital member directory.</li>
+        <li><strong>Event Discounts:</strong> 15% discount on all Chamber banquet tickets.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
+</dialog>
+
+<dialog id="gold-modal">
+    <h3>Gold Membership Benefits</h3>
+    <ul>
+        <li><strong>All Silver Benefits included.</strong></li>
+        <li><strong>Homepage Spotlight:</strong> Permanent logo placement on the Chamber homepage.</li>
+        <li><strong>VIP Access:</strong> 2 complimentary tickets to the Annual Gala.</li>
+        <li><strong>Keynote Opportunities:</strong> First priority for speaking slots at networking luncheons.</li>
+        <li><strong>Ad Credits:</strong> $500 annual credit toward Chamber digital advertising.</li>
+        <li><strong>Board Eligibility:</strong> Exclusive eligibility to run for the Chamber Board of Directors.</li>
+    </ul>
+    <button type="button" class="close-modal">Close</button>
+</dialog>
+        </main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left Section -->
+    <div class="footer-left">
+      <strong>Abuja Chamber of Commerce</strong><br>
+      #40 Accra Street,<br>
+      Wuse Zone 5, Abuja FCT.<br>
+      info@abujachamber.org<br>
+      (+224) 8068-133269
+    </div>
+
+    <!-- Center Section -->
+    <div class="footer-center">
+      <a href="#" class="social"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#" class="social"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+      <a href="#" class="social"><img src="images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <strong>WDD231 Class Project</strong><br>
+      John Mark<br>
+      &copy; <span id="currentyear"></span> Abuja Chamber of Commerce <br>
+      <span id="lastModified"></span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

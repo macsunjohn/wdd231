@@ -12,6 +12,7 @@
   --footer-bg: #111111;
   --heading-color: #3a3838;
   --view-buttons: #242424;
+  --gray-color: #888888;
 
   /* Font Variables */
   --heading-font: "Poppins", sans-serif;
@@ -30,7 +31,6 @@
 
 body {
   font-family: var(--body-font);
-  background: var(--background-color);
   color: var(--text-color);
   margin: 0;
 }
@@ -327,4 +327,130 @@ h2 {
 
 .spotlight-card img {
   width: 100px;
+}
+
+
+/* Join Form */
+.join-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/* Form Styling */
+.form-section form label {
+    display: block;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    color: var(--gray-color);
+}
+
+.form-section input, .form-section select, .form-section textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Membership Cards Styling */
+.membership-card {
+    background-color: #587B7F;
+    border: 1px solid #333;
+    border-radius: 15px 50px 15px 15px; 
+    padding: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0; 
+    transform: scale(0.9);
+    animation: cardEntry 0.6s ease forwards;
+}
+
+.membership-card p {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+@keyframes cardEntry {
+    to { opacity: 1; transform: scale(1); }
+}
+
+.membership-card:nth-child(2) { animation-delay: 0.2s; }
+.membership-card:nth-child(3) { animation-delay: 0.4s; }
+.membership-card:nth-child(4) { animation-delay: 0.6s; }
+.membership-card:nth-child(5) { animation-delay: 0.8s; }
+
+/* Styling for the Learn More buttons inside the cards */
+.open-modal {
+    background-color: #ffffff; 
+    color: #333;               
+    border: 1px solid #777;    
+    padding: 8px 20px;         
+    font-family: serif;        
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;       
+    transition: all 0.2s ease-in-out;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+    margin-top: 10px;          
+}
+
+/* Hover effect for better UX */
+.open-modal:hover {
+    background-color: #f0f0f0; 
+    border-color: #333;        
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+    transform: translateY(-1px); 
+}
+
+.open-modal:active {
+    transform: translateY(1px); /* "Pressed" feel */
+    box-shadow: none;
+}
+
+
+/* Modal Styling */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Initial State: thick left border for all inputs (except submit) */
+.join-form input:not([type="submit"]),
+.join-form select,
+.join-form textarea {
+    border: 1px solid #999; 
+    border-left: 8px solid #999; 
+    transition: border-color 0.3s ease; 
+}
+
+/* Invalid State: Red border while the user is typing or if field is empty/required */
+/* :placeholder-shown prevents the field from being red before the user starts typing */
+.join-form input:not([type="submit"]):not(:placeholder-shown):invalid,
+.join-form select:not(:placeholder-shown):invalid,
+.join-form textarea:not(:placeholder-shown):invalid {
+    border-left-color: #d12f2f; 
+}
+
+/* Valid State: Green border when the pattern/requirement is met */
+.join-form input:not([type="submit"]):valid,
+.join-form select:valid,
+.join-form textarea:valid {
+    border-left-color: #2a8a2a; 
+}
+
+
+.submit-btn {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 5px;
+    cursor: pointer;
 }
