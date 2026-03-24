@@ -18,7 +18,7 @@ async function getSpotlights() {
     card.classList.add('spotlight-card');
 
     card.innerHTML = `
-      <h3>${member.name}</h3>
+      <h2>${member.name}</h2>
       <img src="${member.image}" alt="${member.name}">
       <p>${member.address}</p>
       <p>${member.phone}</p>
