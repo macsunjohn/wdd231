@@ -566,3 +566,62 @@ dialog::backdrop {
     transform: translateY(0);
     box-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }
+
+/* Discover Page and Visitor Message */
+/* Visitor Message Styling */
+.visitor-banner {
+    background-color: var(--light-grey);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border);
+    font-weight: bold;
+}
+
+/* Base Card Styling */
+.discover-card {
+    border: 1px solid var(--light-grey);
+    padding: 10px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.discover-card h2 { 
+  margin-top: 0.5rem; 
+}
+.discover-card address { 
+  font-weight: bold; 
+  color: var(--text-color); 
+  font-size: 1rem; 
+  margin-bottom: 10px;
+
+}
+
+.discover-card button { 
+  margin-top: 10px; 
+  padding: 10px; 
+  cursor: pointer; 
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Grid Setup - Named Areas */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}

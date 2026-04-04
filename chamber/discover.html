@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abuja Chamber of Commerce Directory</title>
+<title>Abuja Chamber of Commerce | Discover</title>
 <meta name="description" content="Directory of businesses that belong to the Abuja Chamber of Commerce.">
 <meta name="author" content="Janet Ojochide Daniel">
 <link rel="icon" href="images/favicon.ico">
@@ -16,14 +16,16 @@
 
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/medium.css">
 <link rel="stylesheet" href="styles/larger.css">
 <link rel="icon" href="images/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<script defer src="scripts/directory.js"></script>
+<script src="scripts/discover.js" type="module"></script>
 <script defer src="scripts/date.js"></script>
+<script defer src="scripts/navigation.js"></script>
 </head>
 
 <body>
@@ -39,22 +41,17 @@
 <nav>
 <ul class="navigation">
 <li><a href="index.html">Home</a></li>
-<li><a href="directory.html" class="active">Directory</a></li>
+<li><a href="directory.html">Directory</a></li>
 <li><a href="join.html">Join</a></li>
-<li><a href="discover.html">Discover</a></li>
+<li><a href="discover.html" class="active">Discover</a></li>
 </ul>
 </nav>
 </header>
 
 <main>
-<h2>Business Directory</h2>
-
-<div class="view-buttons">
-<button type="button" id="grid">Grid View</button>
-<button type="button" id="list">List View</button>
-</div>
-
-<section id="members" class="grid"></section>
+<div id="visitor-message" class="visitor-banner"></div>
+    <h2>Discover Abuja</h2>
+    <section class="discover-grid"></section>
 
 </main>
 
