@@ -1,0 +1,142 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+    /* Colors */
+    --primary-color: #1e1e2f;
+    --secondary-color: #6A0136;
+    --background-dark: #111111;
+    --background-white: #ffffff;
+    --text-color: #333;
+    --border-color: #ffffff;
+    --text-white: whitesmoke;
+    --card-background: #2a2a40;
+    --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+
+    /* Fonts */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+
+    /* Spacing */
+    --padding-small: 10px;
+    --padding-medium: 20px;
+
+    /* Borders */
+    --border-thin: 1px solid var(--border-color);
+    --border-thick: 2px solid var(--border-color);
+
+    /* Radius */
+    --radius: 5px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--background-white);
+    color: var(--text-color);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: var(--background-dark);
+    padding: var(--padding-medium);
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    color: var(--text-white);
+    margin: 0;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main {
+   max-width: 980px;
+    margin: 0 auto;
+    padding: var(--padding-medium);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    border-bottom: var(--border-thick);
+    padding-bottom: 5px;
+}
+
+/* =========================
+   CARD LAYOUT
+========================= */
+.card {
+    background-color: var(--background-white);
+    padding: var(--padding-medium);
+    margin-bottom: var(--padding-medium);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    width: 100%;
+}
+
+.card p {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+/* =========================
+   COLOR BOXES
+========================= */
+.color-box {
+    padding: var(--padding-small);
+    margin: 10px 0;
+    font-weight: bold;
+    border-radius: var(--radius);
+    width: 300px;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    border: var(--border-thin);
+    color: var(--text-white);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+/* =========================
+   WIREFRAME
+========================= */
+
+#wireframe img {
+    width: 940px;
+    height: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--background-dark);
+    text-align: center;
+    padding: var(--padding-small);
+}
+
+footer p {
+    color: var(--text-white);
+    margin: 0;
+}
