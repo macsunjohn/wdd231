@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MovieBox | Home</title>
-<meta name="description" content="MovieBox is your go-to platform for movie recommendations, reviews, and trending films. Discover new movies and save your favourites all in one place.">
-<meta name="author" content="Mark John">
-<link rel="icon" href="images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieBox | Home</title>
+    <meta name="description" content="MovieBox is your go-to platform for movie recommendations, reviews, and trending films. Discover new movies and save your favourites all in one place.">
+    <meta name="author" content="Mark John">
+    <link rel="icon" href="images/favicon.ico">
 
-<!-- Facebook Meta -->
-<meta property="og:title" content="Abuja Chamber of Commerce">
-<meta property="og:description" content="Supporting businesses in Abuja through networking and partnerships.">
-<meta property="og:image" content="https://macsunjohn.github.io/wdd231/images/logo.svg">
-<meta property="og:url" content="https://macsunjohn.github.io/wdd231/chamber">
- <!-- Google Fonts -->
+    <meta property="og:title" content="MovieBox | Discover Trending Films">
+    <meta property="og:description" content="Explore the latest trending movies and manage your personal watchlist.">
+    <meta property="og:image" content="https://macsunjohn.github.io/wdd231/final-project/images/logo.png">
+    <meta property="og:url" content="https://macsunjohn.github.io/wdd231/final-project/index.html">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Play:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Stylesheets -->
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-<link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/movie-small.css">
+    <link rel="stylesheet" href="styles/movie-larger.css">
 
-<!-- JavaScript -->
-<script src="scripts/date.js" defer></script>
-<script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/main.js" type="module"></script>
+    
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="MovieBox Logo" id="logo-img" loading="lazy">
+                <span>Movie</span>Box
+            </a>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="header-search" placeholder="Search movies...">
+        </div>
 
-<header>
+        <button type="button" id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+        
+        <nav id="main-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="browse.html">Browse</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="watchlist.html">Watchlist</a>
+        </nav>
+    </header>
 
-</header>
+    <main>
+        <section id="hero" class="hero-container">
+            <div class="hero-content">
+                <div class="hero-poster">
+                    <img id="hero-img" src="images/hero-placeholder.webp" alt="Featured Movie Poster">
+                </div>
 
-<main>
-  
+                <div class="hero-details">
+                    <h1 id="hero-title">Loading Featured...</h1>
+                    <p class="rating">Rating: <span id="hero-rating">--</span>/10</p>
+                    <p id="hero-description">
+                        Discover the most talked-about films and build your ultimate watchlist.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button type="button" id="hero-watchlist-btn" class="btn-primary">Add to Watchlist</button>
+                        <button type="button" id="hero-details-btn" class="btn-secondary">Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</main>
+        <section id="trending-section">
+            <div class="section-title">
+                <h2>Trending Now</h2>
+                <hr>
+            </div>
+            <div id="movie-grid" class="movie-grid">
+                </div>
+        </section>
+    </main>
 
+    <dialog id="movie-modal">
+        <div class="modal-header">
+            <h2 id="modal-title">Movie Title</h2>
+            <button type="button" id="close-modal" aria-label="Close Modal">&times;</button>
+        </div>
+        <div id="modal-content">
+            </div>
+    </dialog>
 
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> MovieBox | Mark John</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
 
 </body>
 </html>

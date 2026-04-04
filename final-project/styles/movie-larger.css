@@ -1,0 +1,74 @@
+/* --- Desktop View (Large Screens) --- */
+@media (min-width: 768px) {
+    #menu-button {
+        display: none; 
+    }
+
+    .search-container {
+        display: block; 
+    }
+
+    #main-nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    #main-nav a {
+        padding: 0 15px;
+        font-size: 0.95rem;
+    }
+
+    #main-nav a.active {
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 5px;
+    }
+
+    .hero-content {
+        flex-direction: row; 
+        align-items: center;
+    }
+    
+    .hero-details {
+        text-align: left;
+    }
+
+     .modal-body-layout {
+        flex-direction: row; 
+        align-items: flex-start;
+    }
+}
+
+/* Trending Section Styling */
+#trending {
+    padding: 2rem 5%;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Basic Card Styling to match your wireframe */
+.card {
+    background: var(--background-white);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
