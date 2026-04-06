@@ -29,10 +29,7 @@
     <!-- JavaScript -->
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/main.js" type="module"></script>
-    <script src="scripts/movies.js" type="module"></script>
-   
-
+    <script src="scripts/watchlist.js" type="module"></script>
     
 </head>
 
@@ -52,56 +49,75 @@
         <button type="button" id="menu-button" aria-label="Toggle Menu">&#9776;</button>
         
         <nav id="main-nav">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="browse.html">Browse</a>
             <a href="contact.html">Contact Us</a>
-            <a href="watchlist.html">Watchlist</a>
+            <a href="watchlist.html" class="active">Watchlist</a>
         </nav>
     </header>
 
-    <main>
-<section id="hero" class="hero-container">
-  <div class="hero-overlay"></div>
+<!--MAIN-->
 
-  <div class="hero-content">
-    
-    <img id="hero-poster" src="" alt="Featured Movie Poster">
+<main class="layout">
 
-    <div class="hero-text">
-      <h1 id="hero-title">Loading Featured...</h1>
-      <p class="rating">⭐ <span id="hero-rating">--</span>/10</p>
-      <p id="hero-description"></p>
+  <!-- SIDEBAR FILTERS -->
+  <aside class="sidebar">
+    <h3>Filters</h3>
 
-      <div class="hero-buttons">
-        <button type="button" id="hero-watchlist-btn">+ Watchlist</button>
-        <button type="button" id="hero-details-btn">Details</button>
-      </div>
+    <label for="genre-select">Genre</label>
+    <select id="genre-select">
+      <option>All</option>
+      <option>Action</option>
+      <option>Drama</option>
+      <option>Comedy</option>
+      <option>Action Comedy</option>
+      <option>Action Drama</option>
+    </select>
+
+    <label for="year-select">Year</label>
+    <select id="year-select">
+      <option>All</option>
+      <option>2025</option>
+      <option>2024</option>
+      <option>2023</option>
+    </select>
+
+    <label for="rating-select">Rating</label>
+    <select id="rating-select">
+      <option>All</option>
+      <option>9+</option>
+      <option>8+</option>
+      <option>7+</option>
+    </select>
+  </aside>
+  <!-- MAIN CONTENT -->
+  <section class="content">
+
+    <h1 class="page-title">Watchlist</h1>
+
+    <div id="watchlist-grid" class="grid">
+      <!-- JS inject movie cards here -->
     </div>
 
-  </div>
-</section>
+    <p id="empty-watchlist" class="empty">
+      Your watchlist is empty. Go add some movies 🎬
+    </p>
 
-        <section id="trending-section">
-            <div class="section-title">
-                <h2>Trending Now</h2>
-                <hr>
-            </div>
-            <div id="movie-grid" class="movie-grid">
-                </div>
-        </section>
-    </main>
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button type="button">‹</button>
+      <button type="button" class="active">1</button>
+      <button type="button">2</button>
+      <button type="button">3</button>
+      <button type="button">›</button>
+    </div>
 
-    <dialog id="movie-modal">
-        <div class="modal-header">
-            <h2 id="modal-title">Movie Title</h2>
-            <button type="button" id="close-modal" aria-label="Close Modal">&times;</button>
-        </div>
-        <div id="modal-content">
-            </div>
-    </dialog>
+  </section>
 
-    <footer>
+</main>
+<!--FOOTER-->
+<footer>
         <div class="footer-content">
             <p>&copy; <span id="current-year"></span> MovieBox | Mark John</p>
             <p id="last-modified"></p>

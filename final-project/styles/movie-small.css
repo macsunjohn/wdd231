@@ -2,40 +2,44 @@
    ROOT VARIABLES
 ========================= */
 :root {
-    /* Colors */
     --primary-color: #1e1e2f;
-    --secondary-color: #6A0136;
+    --secondary-color: #EDF0DA;
     --background-dark: #111111;
     --background-white: #ffffff;
     --text-color: #333;
+    --text-gray: #888;
     --border-color: #ffffff;
     --text-white: whitesmoke;
     --card-background: #2a2a40;
     --accent-color: #F3A712;
+    --red-color: #e74c3c;
     --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-
-
-    /* Fonts */
     --heading-font: 'Oswald', sans-serif;
     --body-font: 'Arial', sans-serif;
     --nav-font: 'Play', sans-serif;
 
-    /* Spacing */
     --padding-small: 10px;
     --padding-medium: 20px;
 
-    /* Borders */
     --border-thin: 1px solid var(--border-color);
     --border-thick: 2px solid var(--border-color);
-
-    /* Radius */
     --radius: 5px;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background-color: var(--background-dark);
+    color: var(--text-white);
+    font-family: var(--body-font);
+}
 
-/* --- Header Styles --- */
+/* --- Header & Navigation --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -45,56 +49,55 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: var(--border-thin);
 }
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    font-family: var(--heading-font);
-    color: var(--text-white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Logo Container */
-.logo a {
-    display: flex;
-    align-items: center;
-    gap: 12px;           
-    text-decoration: none;
-    color: var(--text-white);       
-}
-
-#logo-img {
-    height: 60px;       
-    width: auto;        
-    object-fit: contain;
-}
-
-.logo span {
-    color: var(--accent-color);     
-}
-
 
 /* --- Desktop Search Bar --- */
 .search-container {
     flex-grow: 0.5;
     margin: 0 2rem;
-    display: none; /* Hidden on mobile */
+    display: flex; /* Changed from 'none' so you can actually see it */
+    align-items: center;
 }
 
 #header-search {
     width: 100%;
     padding: 8px 15px;
     border-radius: 20px;
-    border: 1px solid #444;
-    background: #1a1a1a;
-    color: white;
+    border: 1px solid var(--accent-color); 
+    background: var(--background-dark);
+    color: var(--text-white);
     font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-/* --- Navigation Links --- */
+#header-search:focus {
+    border-color: var(--text-white);
+}
+
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-white);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#logo-img {
+    height: 60px;       
+    width: auto;  
+    margin-right: 12px;      
+    object-fit: contain;
+}
+
+.logo span { color: var(--accent-color); }
+
 #main-nav {
     display: none; 
     flex-direction: column;
@@ -106,9 +109,7 @@ header {
     padding: 1rem 0;
 }
 
-#main-nav.open {
-    display: flex; /* Show when hamburger is clicked */
-}
+#main-nav.open { display: flex; }
 
 #main-nav a {
     color: var(--text-white);
@@ -116,110 +117,162 @@ header {
     font-size: 1.2rem;
     text-decoration: none;
     padding: 1rem 5%;
-    font-weight: 500;
     transition: 0.3s;
 }
 
-#main-nav a:hover {
-    color: var(--accent-color);
-}
+#main-nav a.active, #main-nav a:hover { color: var(--accent-color); }
 
-/* Wayfinding: Active Page Highlighting */
-#main-nav a.active {
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-/* --- Hamburger Button --- */
 #menu-button {
     background: none;
     border: none;
     color: var(--text-white);
     font-size: 1.8rem;
     cursor: pointer;
-    padding: 0;
 }
 
-/* ---Hero Section--- */
-/* Hero Container */
+/* --- Hero Section --- */
 .hero-container {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), #121212), url('../images/hero-bg.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 4rem 5%;
-    min-height: 400px;
+    position: relative;
+    height: 80vh;
+    background: url("../images/watch.webp") center/cover no-repeat;
     display: flex;
     align-items: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     display: flex;
-    flex-direction: column; 
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 20px;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
-.hero-poster img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.hero-details h1 {
+.hero-text h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.rating {
-    color: #00ff88; /* High visibility green */
-    font-weight: bold;
     margin-bottom: 1rem;
 }
 
-#hero-description {
-    line-height: 1.6;
-    color: var(--text-white);
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-/* Button Styling */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn-primary {
-    background: var(--accent-color);
-    color: var(--text-color);
+.hero-buttons button {
+    margin-right: 1rem;
+    padding: 0.7rem 1.5rem;
     border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
+    cursor: pointer;
     font-weight: bold;
-    cursor: pointer;
 }
 
-.btn-secondary {
-    background: rgba(255,255,255,0.2);
-    color: var(--text-white);
-    border: 1px solid var(--text-white);
-    padding: 12px 24px;
-    border-radius: 4px;
-    cursor: pointer;
+.section-title {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    margin: 30px 0 15px;
+    color: var(--accent-color);
 }
 
-/* --- Trending Grid (Mobile) --- */
-#trending-section {
-    padding: var(--padding-medium);
-    background-color: var(--background-dark);
+.section-title h2 {
+    margin-left: 1rem;
+   
 }
 
+/* --- Movie Grid & Card --- */
 .movie-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Stack cards in a single column on mobile */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.movie-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--card-shadow);
+}
+
+.movie-info {
+    padding: 15px;
+}
+.movie-info h3 {
+    font-family: var(--nav-font);
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+.release-date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin: 8px 0;
+}
+
+.card-image .rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7); /* FIXED BROKEN VAR */
+    color: var(--accent-color);
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+.card-info { padding: 15px; }
+
+.card-info h3 {
+    font-family: var(--nav-font);
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.release-date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin: 8px 0;
+}
+
+/* --- Buttons & States --- */
+
+.watchlist-btn, #hero-watchlist-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.watchlist-btn.active, #hero-watchlist-btn.active {
+    background: green;
+    color: var(--text-white);
+}
+
+.details-btn {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: var(--red-color);
+    color: var(--text-white);
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: none;
+    margin: 12px 0 12px 12px;
+    cursor: pointer;
 }
 
 /* --- Modal Styling --- */
@@ -233,19 +286,10 @@ dialog {
     max-width: 500px;
 }
 
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+dialog::backdrop { background-color: rgba(0, 0, 0, 0.8); }
 
-#close-modal {
-    background: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    float: right;
-    cursor: pointer;
-}
 
+/* --- Footer --- */
 footer {
     padding: var(--padding-medium);
     background-color: var(--primary-color);
@@ -253,106 +297,176 @@ footer {
     text-align: center;
     border-top: var(--border-thin);
     font-family: var(--body-font);
+    margin-top: 40px;
 }
 
-/* Container for the Grid */
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+/* --- Watchlist Page Layout --- */
+.layout {
+    display: flex;
     padding: 20px;
-    background-color: var(--background-dark); /* Ensure background is dark */
+    gap: 20px;
+    min-height: 80vh;
 }
 
-/* Individual Card Styling */
-.movie-card {
-    background-color: var(--background-white); /* The image shows a white card body */
-    border: 1px solid var(--card-background);
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    border-right: var(--border-thin);
+    padding-right: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+}
+
+.sidebar label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #222;
+    color: white;
+    border: 1px solid var(--text-gray);
     border-radius: 4px;
+}
+
+/* CONTENT AREA */
+.content {
+    flex: 1;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+/* WATCHLIST GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* WATCHLIST CARD */
+.watchlist-card {
+    background: var(--card-background);
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    color: #333; 
+    position: relative;
+    transition: transform 0.3s;
 }
 
-.movie-card img {
+.watchlist-card:hover {
+    transform: translateY(-5px);
+}
+
+.watchlist-img img {
     width: 100%;
-    aspect-ratio: 2 / 3;
+    height: 300px;
     object-fit: cover;
 }
 
-/* Content Area inside the Card */
-.card-details {
-    padding: 12px;
-    text-align: left; 
+.watchlist-content {
+    padding: 15px; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
 }
 
-.card-rating {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.card-details h3 {
-    font-family: var(--heading-font);
+.watchlist-content h3 {
+    margin: 0;
     font-size: 1.1rem;
-    margin: 5px 0;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
-.release-date {
-    font-size: 0.85rem;
-    color: var(--card-background);
-    margin: 8px 0;
+.meta {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 500;
 }
 
-/* View Details Button */
-.details-btn {
-    align-self: flex-start; 
-    background-color: var(--primary-color);
-    border: 1px solid var(--card-background);
+.rating {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* EMPTY STATE */
+.empty {
+    text-align: center;
+    margin-top: 50px;
+    grid-column: 1 / -1;
+    color: var(--text-gray);
+    font-size: 1.2rem;
+}
+
+
+.pagination button {
+    padding: 8px 16px;
+    border: var(--border-thin);
+    background: transparent;
     color: var(--text-white);
-    border-radius: 2px;
-    padding: 4px 8px;
-    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination button.active, 
+.pagination button:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+}
+
+/* ---Browse Page --- */
+
+/* --- Pagination --- */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.details-btn:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+.arrow-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
-/* Modal Internal Layout */
-.modal-body-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 15px;
+.page-numbers button {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 6px 12px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-.modal-poster {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
+.page-numbers button.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
     border-radius: 4px;
-}
-
-.modal-text p {
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-/* Modal Header Styling */
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-#modal-title {
-    color: var(--secondary-color);
-    margin: 0;
 }

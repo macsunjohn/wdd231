@@ -4,6 +4,7 @@
       "id": 1,
       "title": "Project Hail Mary",
       "rating": 9.5,
+      "genre": "Sci-Fi",
       "description": "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there.",
       "poster": "images/project_hail_mary.webp",
       "release_date": "2026-03-20"
@@ -12,6 +13,7 @@
       "id": 2,
       "title": "Peaky Blinders: The Immortal Man",
       "rating": 9.0,
+      "genre": "Crime Drama",
       "description": "Amidst the chaos of WWII, Tommy Shelby is driven back from a self-imposed exile to face his most destructive reckoning yet.",
       "poster": "images/peaky_blinders.webp",
       "release_date": "2026-03-27"
@@ -20,6 +22,7 @@
       "id": 3,
       "title": "They Will Kill You",
       "rating": 6.3,
+      "genre": "Horror",
       "description": "A young woman must survive the night at the Virgil, a demonic cult's mysterious skyscraper, in this hyper-stylized battle royale.",
       "poster": "images/they_will_kill_you.webp",
       "release_date": "2026-04-01"
@@ -28,6 +31,7 @@
       "id": 4,
       "title": "Send Help",
       "rating": 9.3,
+      "genre": "Survival Thriller",
       "description": "Two colleagues become stranded on a deserted island after a plane crash and must overcome past differences to survive.",
       "poster": "images/send_help.webp",
       "release_date": "2026-03-15"
@@ -36,6 +40,7 @@
       "id": 5,
       "title": "Mercy",
       "rating": 2.5,
+      "genre": "Sci-Fi Thriller",
       "description": "In the near future, a detective stands on trial accused of murdering his wife and has 90 minutes to prove his innocence.",
       "poster": "images/mercy_2026.webp",
       "release_date": "2026-02-14"
@@ -44,6 +49,7 @@
       "id": 6,
       "title": "Mike & Nick & Nick & Alice",
       "rating": 7.7,
+      "genre": "Action Comedy",
       "description": "A stylized action-comedy about two gangsters and the woman they love trying to survive the most dangerous night of their lives.",
       "poster": "images/mike-nick.webp",
       "release_date": "2026-03-10"
@@ -52,6 +58,7 @@
       "id": 7,
       "title": "Ready or Not 2: Here I Come",
       "rating": 7.3,
+      "genre": "Horror Comedy",
       "description": "Moments after surviving an attack, Grace discovers she has reached the next level of a nightmarish game with her new in-laws.",
       "poster": "images/ready-or-not-2.webp",
       "release_date": "2026-04-03"
@@ -60,6 +67,7 @@
       "id": 8,
       "title": "Hoppers",
       "rating": 9.4,
+      "genre": "Animation",
       "description": "Scientists discover how to 'hop' human consciousness into lifelike robotic animals to better understand the natural world.",
       "poster": "images/hoppers.webp",
       "release_date": "2026-03-05"
@@ -68,6 +76,7 @@
       "id": 9,
       "title": "Good Luck, Have Fun, Don't Die",
       "rating": 8.3,
+      "genre": "Sci-Fi Action",
       "description": "A man claiming to be from the future takes the patrons of a diner hostage in search of unlikely recruits for a mission.",
       "poster": "images/good-luck.webp",
       "release_date": "2025-12-20"
@@ -76,6 +85,7 @@
       "id": 10,
       "title": "Forbidden Fruits",
       "rating": 7.4,
+      "genre": "Fantasy Horror",
       "description": "Employees of a secret witch cult face internal conflict when a new hire questions their sisterhood and ancient traditions.",
       "poster": "images/forbidden-fruits.webp",
       "release_date": "2026-03-12"
@@ -84,6 +94,7 @@
       "id": 11,
       "title": "Anaconda",
       "rating": 4.7,
+      "genre": "Adventure Comedy",
       "description": "A meta-reboot where two friends attempt to film an original comedy inspired by the cinematic classic but encounter the real deal.",
       "poster": "images/anaconda.webp",
       "release_date": "2025-11-15"
@@ -92,6 +103,7 @@
       "id": 12,
       "title": "War Machine",
       "rating": 6.9,
+      "genre": "Action",
       "description": "During an elite team's training exercise, Army Rangers must fight for survival against an unimaginable threat in the wild.",
       "poster": "images/war-machine.webp",
       "release_date": "2026-02-28"
@@ -100,6 +112,7 @@
       "id": 13,
       "title": "One Battle After Another",
       "rating": 9.4,
+      "genre": "Action Drama",
       "description": "A washed-up revolutionary living off-grid with his daughter must confront his past when his former allies track him down.",
       "poster": "images/one-battle.webp",
       "release_date": "2025-10-05"
@@ -108,6 +121,7 @@
       "id": 14,
       "title": "Pretty Lethal",
       "rating": 5.7,
+      "genre": "Action Thriller",
       "description": "Five ballerinas on their way to a competition find themselves in a fight for their lives when their bus breaks down in a dangerous zone.",
       "poster": "images/pretty-lethal.webp",
       "release_date": "2026-01-20"
@@ -116,6 +130,7 @@
       "id": 15,
       "title": "The Drama",
       "rating": 7.9,
+      "genre": "Romance",
       "description": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week spiraling into chaos.",
       "poster": "images/the-drama.webp",
       "release_date": "2026-02-14"

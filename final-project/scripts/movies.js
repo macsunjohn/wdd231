@@ -1,28 +1,55 @@
 /**
- * Fetches movie data from the local JSON file.
- * Requirement: Use Fetch API, async/await, and try...catch.
+ * MovieBox - Fetch Movies Module
+ * Uses Fetch API + async/await + caching + error handling
+ */
+
+let cachedMovies = null;
+
+/**
+ * Fetch movies from local JSON file
+ * @returns {Promise<Array>} movies array
  */
 export async function getMovies() {
-    const jsonPath = 'data/movies.json'; // Path to your new JSON file
+    const jsonPath = "./data/movies.json";
+
+    // return cached data if already loaded
+    if (cachedMovies) {
+        return cachedMovies;
+    }
 
     try {
         const response = await fetch(jsonPath);
 
-        // Check if the network request was successful
         if (!response.ok) {
-            throw new Error(`Could not fetch ${jsonPath}: ${response.statusText}`);
+            throw new Error(
+                `Failed to load movies.json (${response.status} ${response.statusText})`
+            );
         }
 
         const data = await response.json();
 
-        // Requirement: Process the data (returning the array of 15 items)
-        return data.movies;
+        if (!data.movies || !Array.isArray(data.movies)) {
+            throw new Error("Invalid JSON format: 'movies' array missing");
+        }
+
+        // Normalize movie structure (VERY IMPORTANT for watchlist)
+        cachedMovies = data.movies.map(movie => ({
+            id: movie.id,
+            title: movie.title,
+            rating: movie.rating,
+            description: movie.description,
+            poster: movie.poster,
+            release_date: movie.release_date,
+            year: new Date(movie.release_date).getFullYear(),
+            genre: movie.genre || "Unknown"
+        }));
+
+        return cachedMovies;
 
     } catch (error) {
-        // Requirement: Robust error handling
-        console.error("Critical Error fetching movie data:", error);
-        
-        // Return an empty array so the app doesn't crash if fetch fails
+        console.error("Movie fetch error:", error);
+
+        // fallback safe return
         return [];
     }
 }
