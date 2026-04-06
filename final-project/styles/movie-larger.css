@@ -36,9 +36,24 @@
         text-align: left;
     }
 
-     .modal-body-layout {
+     .modal-layout {
         flex-direction: row; 
         align-items: flex-start;
+    }
+        .modal-poster {
+            width: 40%;
+            margin-right: 20px;
+        }
+    
+        .modal-info {
+            width: 60%;
+        }
+      .about-story {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-hero h1 {
+        font-size: 2.2rem;
     }
 }
 

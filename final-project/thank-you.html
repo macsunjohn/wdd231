@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieBox | Home</title>
+    <title>MovieBox | Contact Us</title>
     <meta name="description" content="MovieBox is your go-to platform for movie recommendations, reviews, and trending films. Discover new movies and save your favourites all in one place.">
     <meta name="author" content="Mark John">
 
@@ -53,58 +53,25 @@
         <button type="button" id="menu-button" aria-label="Toggle Menu">&#9776;</button>
         
         <nav id="main-nav">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="browse.html">Browse</a>
             <a href="watchlist.html">Watchlist</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
-        <section id="hero" class="hero-container">
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-            
-            <img id="hero-poster" src="" alt="Featured Movie Poster">
-
-            <div class="hero-text">
-            <h1 id="hero-title">Loading Featured...</h1>
-            <p class="rating">⭐ <span id="hero-rating">--</span>/10</p>
-            <p id="hero-description"></p>
-
-            <div class="hero-buttons">
-                <button type="button" id="hero-watchlist-btn">+ Watchlist</button>
-                <button type="button" id="hero-details-btn">Details</button>
-            </div>
-            </div>
-
-  </div>
-</section>
-
-        <section id="trending-section">
-            <div class="section-title">
-                <h2>Trending Now</h2>
-                <hr>
-            </div>
-            <div id="movie-grid" class="movie-grid">
-                </div>
-        </section>
+    <main class="contact-main">
+     <div class="thankyou-content">
+        <h1>Success!</h1>
+        <p>Thank you for contacting MovieBox. Your message has been received.</p>
+        <br>
+        <a href="index.html" class="return-link">← Return to Home</a>
+    </div>
     </main>
 
-    <!-- Movie Modal -->
-    <dialog id="movie-modal">
-        <div class="modal-header">
-            <h2 id="modal-title">Movie Title</h2>
-            <button type="button" id="close-modal" aria-label="Close Modal">&times;</button>
-        </div>
-        <div id="modal-content">
-            </div>
-    </dialog>
-
-    <!-- Footer -->
+   <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; <span id="current-year"></span> MovieBox | Mark John</p>
