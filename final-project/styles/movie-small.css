@@ -185,7 +185,7 @@ header {
 /* --- Movie Grid & Card --- */
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
@@ -204,7 +204,7 @@ header {
 }
 
 .movie-info {
-    padding: 15px;
+    padding: 10px;
 }
 .movie-info h3 {
     font-family: var(--nav-font);
@@ -221,14 +221,14 @@ header {
     position: absolute;
     top: 8px;
     right: 8px;
-    background: rgba(0, 0, 0, 0.7); /* FIXED BROKEN VAR */
+    background: rgba(0, 0, 0, 0.7); 
     color: var(--accent-color);
     padding: 4px 8px;
     font-size: 0.8rem;
     border-radius: 4px;
 }
 
-.card-info { padding: 15px; }
+.card-info { padding: 10px; }
 
 .card-info h3 {
     font-family: var(--nav-font);
@@ -244,20 +244,12 @@ header {
 
 /* --- Buttons & States --- */
 
-.watchlist-btn, #hero-watchlist-btn {
-    background-color: var(--secondary-color);
-    border: none;
-    color: var(--text-color);
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
 .watchlist-btn.active, #hero-watchlist-btn.active {
     background: green;
     color: var(--text-white);
 }
 
-.details-btn {
+.details-btn, .watchlist-btn {
     background-color: var(--secondary-color);
     border: none;
     color: var(--text-color);
@@ -430,43 +422,3 @@ footer {
     border-color: var(--accent-color);
 }
 
-/* ---Browse Page --- */
-
-/* --- Pagination --- */
-.pagination {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.arrow-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.arrow-btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-.page-numbers button {
-    background: transparent;
-    border: none;
-    color: #888;
-    padding: 6px 12px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.page-numbers button.active {
-    background: var(--accent-color);
-    color: var(--primary-color);
-    font-weight: bold;
-    border-radius: 4px;
-}
