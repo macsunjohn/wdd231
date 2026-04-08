@@ -72,9 +72,14 @@ header {
 }
 
 .navigation {
-  display: none;
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    max-height: 0;          
+    overflow: hidden;        
+    flex-direction: column;  
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: max-height 0.4s ease; 
 }
 
 .navigation.open {
@@ -86,6 +91,11 @@ header {
   padding: 0;
   margin: 0;
   
+}
+
+nav.open .navigation {
+    display: flex;
+    max-height: 500px; 
 }
 
 .navigation li {
@@ -107,6 +117,11 @@ header {
 
   .navigation a:hover {
   color: var(--secondary-color);
+}
+
+nav#primary-nav.open .navigation {
+    display: flex;
+    max-height: 500px; 
 }
 
 /* MAIN */
@@ -597,7 +612,12 @@ dialog::backdrop {
     height: auto;
     display: block;
     padding: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s filter 0.3s ease;
+}
+
+.discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 .discover-card h2 { 
@@ -622,6 +642,15 @@ dialog::backdrop {
 /* Grid Setup - Named Areas */
 .discover-grid {
     display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
     gap: 20px;
     padding: 20px;
 }

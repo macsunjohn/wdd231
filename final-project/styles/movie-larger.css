@@ -87,3 +87,28 @@
     aspect-ratio: 2/3;
     object-fit: cover;
 }
+
+@media screen and (min-width: 1025px) {
+    /* Ensure the main nav stays visible and horizontal */
+    #main-nav {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    /* Hide the mobile menu button */
+    #menu-button {
+        display: none;
+    }
+
+    .hero-content {
+        max-width: 1100px;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
